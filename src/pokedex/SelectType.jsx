@@ -20,6 +20,7 @@ const SelectType = ({setOptionType, optionType, setSearchPokemon}) => {
     setSearchPokemon('')
   }
 
+  
   return (
     <select className='select' value={optionType} onChange={handleChange}>
       <option value="All"> All Pokemons</option>

@@ -1,0 +1,201 @@
+.pokeInfo__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokeInfo___card{
+    margin-top: 250px;
+    width: 1116px;
+    min-width: 1000px;
+    height: 1272px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.pokeInfo__img{
+    position: relative;
+    width: 100%;
+    height: 185px;
+    background-color: aquamarine;
+}
+
+.pokeInfo__img img{
+    position: absolute;
+    width: 40%;
+    left: 50%;
+    top: -140%;
+    transform: translateX(-50%);
+}
+
+.pokeInfo__name{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.order__card{
+    width: max-content;
+    text-align: center;
+    border: 0.3px solid #9F9F9F;
+}
+
+.pokeInfo__name h1{
+    margin: 0;
+    font-size: 2em;
+}
+
+.line__text{
+    background-color: #9F9F9F;
+    width: 30%;
+    height: .4px;
+}
+
+.pokeInfo__personal{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.pokeInfo__personal li{
+    list-style: none;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.weight__height p{
+    font-size: 1rem;
+    color: #9F9F9F;
+}
+
+.pokeInfo__type-habilities{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.margin-rigth{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn__type{
+    display: flex;
+    gap: 30px;
+}
+
+.btn__ability{
+    display: flex;
+    gap: 10px;
+}
+
+.btn__type button{
+    box-sizing: border-box;
+    font-size: 1.3rem;
+    background-color: #FFFFFF;
+    border: 1px solid #D3D3D3;
+    border-radius: 2px;
+    /* display: flex; */
+}
+
+.btn__ability button{
+    box-sizing: border-box;
+    font-size: 1.3rem;
+    background-color: #FFFFFF;
+    border: 1px solid #D3D3D3;
+    border-radius: 2px;
+}
+
+.pokeInfo__type{
+    width: max-content;
+
+}
+
+.pokeInfo__type h2{
+    text-align: center;
+}
+
+.pokeInfo__habilities{
+    width: max-content;
+}
+
+.pokeInfo__habilities h2{
+    text-align: center;
+}
+
+.poke__navbar{
+    width: 76%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.poke__divider{
+    background-color: #9F9F9F;
+    width: 67%;
+    height: .4px;
+}
+
+.poke__navbar h1{
+    font-size: 3rem;
+}
+
+.poke__navbar img{
+    width: 15%;
+}
+
+.poke__navbar img:hover{
+    transform: scale(1.1);
+    transition: transform 200 ease;
+}
+
+.stat__bar{
+    width: 76%;
+}
+
+.stat__text{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bar__box{
+    width: 100%;
+    height: 34px;
+    border-radius: 4px;
+    background: #F7F7F7;
+}
+
+.pokeInfo__move{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    width: 1116px;
+    height: 722px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.movements{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.movements button{
+    font-size: 2rem;
+    background: #E5E5E5;
+    border-radius: 50px;
+}

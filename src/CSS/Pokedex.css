@@ -10,6 +10,7 @@
 .pokedex__header{
     position: relative;
     width: 100%;
+    min-width: 990px;
 }
 
 .img__pokedex img{

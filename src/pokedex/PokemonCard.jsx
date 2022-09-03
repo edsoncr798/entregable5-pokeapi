@@ -17,6 +17,7 @@ const PokemonCard = ({url}) => {
     .catch(err=>console.log(err))
   },[])
 
+  // console.log(pokemon)
   // no se usa el encadenamiento opcional por que las cards ya se muestran y solo debemos hacer click
   const handleClick=()=>navigate(`/pokedex/${pokemon.name}`)
 

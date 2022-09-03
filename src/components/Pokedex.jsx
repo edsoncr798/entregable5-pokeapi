@@ -46,7 +46,6 @@ const Pokedex = () => {
     // cada que cambie el valor de searchPokemon se hara una nueva peticion a la API
   },[searchPokemon, optionType])
   
-console.log(pokemons)
   // accedemos a la info del stado global de la store
   const nameTrainer =useSelector(state=>state.nameTrainer)
 

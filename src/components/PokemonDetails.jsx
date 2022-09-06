@@ -4,7 +4,6 @@ import '../CSS/Pokedex.css'
 import '../CSS/PokeDetails.css'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import StatPercentage from './StatPercentage'
 
 
 const PokemonDetails = () => {

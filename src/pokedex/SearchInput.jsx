@@ -11,14 +11,13 @@ const SearchInput = ({setSearchPokemon, setOptionType}) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className='search__input' onSubmit={handleSubmit}>
       <input 
-        className='search'
         type="text" 
         id="searchText" 
         placeholder='Search Pokemon'
       />
-      <button className='search__btn'>Search</button>
+      <button>Search</button>
     </form>
   )
 }

@@ -1,14 +1,15 @@
 .pokeInfo__container{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* justify-content: center; */
 }
 
 .pokeInfo___card{
-    margin-top: 250px;
-    width: 1116px;
-    min-width: 1000px;
-    height: 1272px;
+    margin-top: 100px;
+    width: 80%;
+    min-width: 350px;
     background: #FFFFFF;
     box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -27,9 +28,9 @@
 
 .pokeInfo__img img{
     position: absolute;
-    width: 40%;
+    width: 250px;
     left: 50%;
-    top: -140%;
+    top: -44%;
     transform: translateX(-50%);
 }
 
@@ -87,14 +88,25 @@
     justify-content: space-between;
 }
 
-.btn__type{
+/* .btn__type{
     display: flex;
-    gap: 30px;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5px;
 }
 
 .btn__ability{
     display: flex;
+    flex-direction: column;
     gap: 10px;
+    margin-top: 5px;
+} */
+
+.btn__type, .btn__ability{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5px;
 }
 
 .btn__type button{
@@ -160,6 +172,7 @@
 
 .stat__bar{
     width: 76%;
+    margin-bottom: 50px;
 }
 
 .stat__text{
@@ -169,21 +182,120 @@
 
 .bar__box{
     width: 100%;
-    height: 34px;
-    border-radius: 4px;
-    background: #F7F7F7;
+    border-radius: 10px;
+    background-color: gray;
 }
+
+/* barra porcentual */
+
+.stat__content{
+    text-align: right;
+    padding: 0.5em;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.bar__percentage10{
+    background: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
+    animation: percentage10 5s forwards 
+  }
+  .bar__percentage20{
+    background: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
+    animation: percentage20 5s forwards
+  }
+  .bar__percentage30{
+     background: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
+    animation: percentage30 5s forwards
+  }
+  .bar__percentage40{
+     background: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
+    animation: percentage40 5s forwards 
+  }
+  .bar__percentage50{
+     background: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
+    animation: percentage50 5s forwards
+  }
+  .bar__percentage60{
+     background: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);;
+    animation: percentage60 5s forwards
+  }
+  .bar__percentage70{
+     background: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
+    animation: percentage70 5s forwards
+  }
+  .bar__percentage80{
+     background: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
+    animation: percentage80 5s forwards
+  }
+  .bar__percentage90{
+     background: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
+    animation: percentage90 5s forwards
+  }
+  .bar__percentage100{
+     background: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
+    animation: percentage100 5s forwards
+  }
+  
+  @keyframes percentage10 {
+      0%{width:0;}
+      100%{width: 10%;}
+  }
+  
+  @keyframes percentage20 {
+      0%{width:0;}
+      100%{width: 20%;}
+  }
+  
+  @keyframes percentage30 {
+      0%{width:0;}
+      100%{width: 30%;}
+  }
+  
+  @keyframes percentage40 {
+      0%{width:0;}
+      100%{width: 40%;}
+  }
+  
+  @keyframes percentage50 {
+      0%{width:0;}
+      100%{width: 50%;}
+  }
+  
+  @keyframes percentage60 {
+      0%{width:0;}
+      100%{width: 60%;}
+  }
+  
+  @keyframes percentage70 {
+      0%{width:0;}
+      100%{width: 70%;}
+  }
+  
+  @keyframes percentage80 {
+      0%{width:0;}
+      100%{width: 80%;}
+  }
+  @keyframes percentage90 {
+      0%{width:0;}
+      100%{width: 90%;}
+  }
+  @keyframes percentage100 {
+      0%{width:0;}
+      100%{width: 100%;}
+  }
 
 .pokeInfo__move{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 100px;
-    width: 1116px;
-    height: 722px;
+    width: 80%;
+    min-width: 350px;
     background: #FFFFFF;
     box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    margin-bottom: 10px;
 }
 
 .movements{
@@ -192,10 +304,29 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    margin-bottom: 20px;
 }
 
 .movements button{
     font-size: 2rem;
     background: #E5E5E5;
     border-radius: 50px;
+}
+
+/* medias querys */
+
+@media screen and (min-width: 700px) {
+
+.btn__type{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.btn__ability{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
 }

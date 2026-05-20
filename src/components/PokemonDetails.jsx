@@ -28,33 +28,9 @@ const PokemonDetails = () => {
     defense:pokeInfo?.stats[5].base_stat,
   }
 
-  const calcPercentageStat = () => {
-    const datoStat= statData;
-    let result = 0
-
-    if(datoStat>=0&& datoStat<=16){
-      result = 10
-    }else if(datoStat>=17 && datoStat<=33){
-      result = 20
-    }else if(datoStat>=34 && datoStat<=48){
-      result = 30
-    }else if(datoStat>=49 && datoStat<=64){
-      result = 40
-    }else if(datoStat>=65 && datoStat<76){
-      result = 50
-    }else if(datoStat>=77 && datoStat<90){
-      result = 60
-    }else if(datoStat>=90 && datoStat<105){
-      result = 70
-    }else if(datoStat>=105 && datoStat<120){
-      result = 80
-    }else if(datoStat>=120 && datoStat<135){
-      result = 90
-    }else{
-      result = 100
-    }
-    // (datoStat>=135 && datoStat<=150)
-    return result
+  const calcPercentageStat = (baseStat) => {
+    if (baseStat === undefined || baseStat === null) return 0
+    return Math.min(100, (baseStat / 150) * 100)
   }
 
   // console.log(pokeInfo)
@@ -132,8 +108,12 @@ const PokemonDetails = () => {
               </div>
 
               <div className='bar__box'>
-                <div 
-                  className={`stat__content bar__percentage${calcPercentageStat()}`}
+                <div
+                  style={{
+                    width: `${calcPercentageStat(pokeInfo?.stats[0].base_stat)}%`,
+                    background: 'linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%)'
+                  }}
+                  className={`stat__content bar__percentage`}
                 >
                   {
                     pokeInfo?.stats[0].base_stat
@@ -148,8 +128,12 @@ const PokemonDetails = () => {
               <h2 key={pokeInfo?.stats[1].stat.url}>{pokeInfo?.stats[1].base_stat}/150</h2>
             </div>
             <div className='bar__box'>
-              <div 
-                className={`stat__content stat bar__percentage${calcPercentageStat()}`}
+              <div
+                style={{
+                  width: `${calcPercentageStat(pokeInfo?.stats[1].base_stat)}%`,
+                  background: 'linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%)'
+                }}
+                className={`stat__content stat bar__percentage`}
               >
                 {
                   pokeInfo?.stats[1].base_stat
@@ -164,8 +148,12 @@ const PokemonDetails = () => {
               <h2 key={pokeInfo?.stats[2].stat.url}>{pokeInfo?.stats[2].base_stat}/150</h2>
             </div>
             <div className='bar__box'>
-              <div 
-                className={`stat__content stat bar__percentage${calcPercentageStat()}`}
+              <div
+                style={{
+                  width: `${calcPercentageStat(pokeInfo?.stats[2].base_stat)}%`,
+                  background: 'linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%)'
+                }}
+                className={`stat__content stat bar__percentage`}
               >
                 {
                   pokeInfo?.stats[2].base_stat
@@ -180,8 +168,12 @@ const PokemonDetails = () => {
               <h2 key={pokeInfo?.stats[5].stat.url}>{pokeInfo?.stats[5].base_stat}/150</h2>
             </div>
             <div className='bar__box'>
-                  <div 
-                    className={`stat__content stat bar__percentage${calcPercentageStat()}`}
+                  <div
+                    style={{
+                      width: `${calcPercentageStat(pokeInfo?.stats[5].base_stat)}%`,
+                      background: 'linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%)'
+                    }}
+                    className={`stat__content stat bar__percentage`}
                   >
                     {pokeInfo?.stats[5]['base_stat']}
                   </div>

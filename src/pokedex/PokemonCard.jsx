@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef, useState} from 'react'
 import '../CSS/Colors.css'
-import {useState} from 'react'
 import axios from 'axios'
 import StatPokemon from './StatPokemon'
 import {useNavigate} from 'react-router-dom'
@@ -8,8 +7,9 @@ import {useNavigate} from 'react-router-dom'
 const PokemonCard = ({url}) => {
 
   const navigate=useNavigate()
-
+  const cardRef = useRef(null)
   const [pokemon, setPokemon]= useState()
+  const [isRevealed, setIsRevealed] = useState(false)
 
   useEffect(()=>{
     axios.get(url)
@@ -17,13 +17,37 @@ const PokemonCard = ({url}) => {
     .catch(err=>console.log(err))
   },[])
 
+  useEffect(()=>{
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            setIsRevealed(true)
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      {threshold: 0.1}
+    )
+
+    if(cardRef.current){
+      observer.observe(cardRef.current)
+    }
+
+    return () => {
+      if(cardRef.current){
+        observer.unobserve(cardRef.current)
+      }
+    }
+  },[pokemon])
+
   // console.log(pokemon)
   // no se usa el encadenamiento opcional por que las cards ya se muestran y solo debemos hacer click
   const handleClick=()=>navigate(`/pokedex/${pokemon.name}`)
 
 
   return (
-    <article onClick={handleClick} className={`pokemon__card border-${pokemon?.types[0].type.name}`}>
+    <article ref={cardRef} onClick={handleClick} className={`pokemon__card border-${pokemon?.types[0]?.type.name} ${isRevealed ? 'revealed' : ''}`}>
       <header className={`header__pokemon bg-${pokemon?.types[0].type.name}`}>
         <img src={pokemon?.sprites.other['official-artwork']['front_default']} alt="" />
       </header>

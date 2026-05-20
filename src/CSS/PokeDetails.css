@@ -194,96 +194,13 @@
     color: white;
     font-weight: bold;
     border-radius: 10px;
+    width: 0;
+    transition: width 1.5s ease-out;
 }
 
-.bar__percentage10{
+.bar__percentage{
     background: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
-    animation: percentage10 5s forwards 
-  }
-  .bar__percentage20{
-    background: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
-    animation: percentage20 5s forwards
-  }
-  .bar__percentage30{
-     background: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
-    animation: percentage30 5s forwards
-  }
-  .bar__percentage40{
-     background: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
-    animation: percentage40 5s forwards 
-  }
-  .bar__percentage50{
-     background: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
-    animation: percentage50 5s forwards
-  }
-  .bar__percentage60{
-     background: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);;
-    animation: percentage60 5s forwards
-  }
-  .bar__percentage70{
-     background: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
-    animation: percentage70 5s forwards
-  }
-  .bar__percentage80{
-     background: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
-    animation: percentage80 5s forwards
-  }
-  .bar__percentage90{
-     background: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
-    animation: percentage90 5s forwards
-  }
-  .bar__percentage100{
-     background: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
-    animation: percentage100 5s forwards
-  }
-  
-  @keyframes percentage10 {
-      0%{width:0;}
-      100%{width: 10%;}
-  }
-  
-  @keyframes percentage20 {
-      0%{width:0;}
-      100%{width: 20%;}
-  }
-  
-  @keyframes percentage30 {
-      0%{width:0;}
-      100%{width: 30%;}
-  }
-  
-  @keyframes percentage40 {
-      0%{width:0;}
-      100%{width: 40%;}
-  }
-  
-  @keyframes percentage50 {
-      0%{width:0;}
-      100%{width: 50%;}
-  }
-  
-  @keyframes percentage60 {
-      0%{width:0;}
-      100%{width: 60%;}
-  }
-  
-  @keyframes percentage70 {
-      0%{width:0;}
-      100%{width: 70%;}
-  }
-  
-  @keyframes percentage80 {
-      0%{width:0;}
-      100%{width: 80%;}
-  }
-  @keyframes percentage90 {
-      0%{width:0;}
-      100%{width: 90%;}
-  }
-  @keyframes percentage100 {
-      0%{width:0;}
-      100%{width: 100%;}
-  }
+}
 
 .pokeInfo__move{
     display: flex;
